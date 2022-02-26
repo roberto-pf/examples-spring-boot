@@ -15,17 +15,12 @@ public class StopWatchAOP {
     {
         StopWatch sw = new StopWatch();
         Object retVal;
-        try
-        {
+        try {
             sw.start(pjp.getTarget()+"."+pjp.getSignature());
             retVal = pjp.proceed();
-        }
-        catch (Throwable e)
-        {
+        } catch (Throwable e) {
             throw e;
-        }
-        finally
-        {
+        } finally {
             sw.stop();
             System.out.println(sw.prettyPrint());
         }

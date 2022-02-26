@@ -12,7 +12,6 @@ public class ExecutionTimeTestListener extends AbstractTestExecutionListener {
     public void beforeTestClass(TestContext testContext) throws Exception {
         super.beforeTestClass(testContext);
         stopWatch = new StopWatch(testContext.getTestClass().getSimpleName());
-        System.out.println("Running test '" + testContext.getTestClass().getSimpleName() + "'...");
     }
 
     @Override
@@ -32,8 +31,6 @@ public class ExecutionTimeTestListener extends AbstractTestExecutionListener {
     @Override
     public void afterTestClass(TestContext testContext) throws Exception {
         System.out.println(stopWatch.prettyPrint());
-
-        System.out.println("Test '" + testContext.getTestClass().getSimpleName() + "' finished after " + stopWatch.getTotalTimeSeconds() + " seconds.");
         super.afterTestClass(testContext);
     }
 }
