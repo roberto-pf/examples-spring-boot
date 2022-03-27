@@ -9,3 +9,8 @@ Ejemplos de distintas formas de realizar mediciones de tiempo de ejecución dura
 Ejemplo de uso de Jasypt para la encriptación de propiedades.
 
 [Disastercode.com.es - Jasypt](http://disastercode.com.es/?p=2348)
+
+## example-profiles 
+Ejemplo de uso de Profiles en spring.
+
+[Disastercode.com.es - Profiles](http://disastercode.com.es/?p=2357)
