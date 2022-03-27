@@ -11,22 +11,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.IfProfileValue;
 import org.springframework.test.context.event.annotation.BeforeTestClass;
 
-
 @SpringBootTest
 class Example5ProfileTest {
 
 	@Value("${custom.hello.world}")
 	private String customHelloWorld;
-	
+
 	@Value("${spring.profiles.active}")
 	private String profileActive;
-	
-	 @BeforeEach
-	 public void beforeMethod() {
-		 assumeTrue( profileActive.equals("prof5"));
-	 }
-	 
-	 
+
+	@BeforeEach
+	public void beforeMethod() {
+		assumeTrue(profileActive.equals("prof5"));
+	}
+
 	@Test
 	void dummyTest() {
 		Assertions.assertEquals(customHelloWorld, "Hello World prof5");
